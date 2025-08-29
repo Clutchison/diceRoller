@@ -1,0 +1,53 @@
+# --- Dependencies / package managers ---
+node_modules/
+# Prevent accidental non-pnpm lockfiles
+package-lock.json
+yarn.lock
+
+# --- Build outputs ---
+dist/
+build/
+out/
+
+# If you publish built files from git, remove the line ignoring dist/ ↑
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Tooling caches / reports ---
+.eslintcache
+coverage/
+.nyc_output/
+reports/
+.vitest/
+
+# --- Logs / diagnostics ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Temp files ---
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Editors / OS junk ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+node_repl_history
+
+# --- Misc packaging artifacts ---
+*.tgz
+
