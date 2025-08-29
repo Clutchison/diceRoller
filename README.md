@@ -94,44 +94,6 @@ Invalid dice string: <your input>
 
 ---
 
-## Project structure
-
-```
-src/
-  cli.ts        # CLI entry point
-tsconfig.json   # Strict TS config (ES2022 / ESNext modules)
-package.json    # ESM, bin points at dist/cli.mjs
-```
-
-Key dependencies:
-- **commander** – CLI parsing
-- **random** – integer RNG
-- **chalk** – pretty output
-
-Dev tooling:
-- **tsx** – fast TS runner
-- **tsup** – bundler (ESM, single file)
-- **vitest** – tests (none included yet)
-
----
-
-## Scripts
-
-From `package.json`:
-
-```jsonc
-{
-  "dev": "tsx src/cli.ts -r",
-  "build": "tsup src/cli.ts --format esm --target node20 --sourcemap --clean --dts --out-dir dist --splitting false --minify",
-  "test": "vitest run",
-  "prepare": "pnpm run build"
-}
-```
-
-Use `pnpm run <script>` to invoke any of the above.
-
----
-
 ## Requirements
 
 - Node.js 18+ (Node 20 recommended)
